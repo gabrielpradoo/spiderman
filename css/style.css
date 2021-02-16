@@ -36,10 +36,33 @@ p {
   line-height: 140%;
 }
 
+/* ----- LOADER ----- */
+.bg-loader {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+  background: linear-gradient(225deg, #ea1d22 0%, #b31317 100%);
+}
+
+/* ----- MAIN CONTAINER ----- */
 .container {
   max-width: 1440px;
   margin: 0 auto;
   padding: 36px 16px;
+  overflow: none;
   height: 85vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -55,6 +78,7 @@ p {
 
 @media screen and (max-width: 960px) {
   .container {
+    overflow: hidden;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -81,6 +105,7 @@ p {
   width: 150%;
   -webkit-transform: translate3d(-205px, 0, 0);
           transform: translate3d(-205px, 0, 0);
+  overflow: hidden;
 }
 
 @media screen and (max-width: 960px) {
@@ -186,7 +211,38 @@ p {
   width: 101%;
 }
 
-/* GENERAL STYLES CLASSES */
+/* ----- VIDEO SECTION ----- */
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.bg-video::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  background: linear-gradient(101.47deg, #0a0c10 26.38%, rgba(10, 12, 16, 0.8) 50.07%, #0a0c10 73.17%);
+}
+
+/* ----- GENERAL STYLES CLASSES ----- */
 .flex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -333,6 +389,49 @@ header {
 @media screen and (max-width: 960px) {
   .nav-social {
     display: none;
+  }
+}
+
+/* ----- LOGO SPIDERMAN LOADER ----- */
+.logo-spiderman {
+  fill: transparent;
+  -webkit-animation: logo-spiderman 12s ease infinite alternate;
+          animation: logo-spiderman 12s ease infinite alternate;
+}
+
+@-webkit-keyframes logo-spiderman {
+  0% {
+    stroke-width: 0;
+    fill: transparent;
+    stroke-dasharray: 1 100;
+  }
+  25% {
+    stroke-width: 1;
+    fill: transparent;
+    stroke-dasharray: 100 0;
+  }
+  60%,
+  100% {
+    stroke-width: 0;
+    fill: #edf1f7;
+  }
+}
+
+@keyframes logo-spiderman {
+  0% {
+    stroke-width: 0;
+    fill: transparent;
+    stroke-dasharray: 1 100;
+  }
+  25% {
+    stroke-width: 1;
+    fill: transparent;
+    stroke-dasharray: 100 0;
+  }
+  60%,
+  100% {
+    stroke-width: 0;
+    fill: #edf1f7;
   }
 }
 
