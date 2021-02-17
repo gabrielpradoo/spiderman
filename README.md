@@ -33,3 +33,8 @@ Spider-Man Hero page created to learn Sass and Design principles.</p>
 <hr>
 
 ![App Gif](spiderman.gif)
+
+<hr>
+<hr>
+
+[Figma Design](https://www.figma.com/file/AFukLroHIs8IUA5a12Gi67/SpiderMan?node-id=0%3A1)
